@@ -23,7 +23,6 @@ body {
   font-family: 'Cairo', sans-serif;
   background-color: var(--body-background-color);
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .feather {
