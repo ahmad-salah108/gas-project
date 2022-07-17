@@ -33,10 +33,16 @@ body {
   right: 17rem;
   z-index: 100;
 }
-@media (max-width: 640px){
-  .add-btn{
+@media (max-width: 640px) {
+  .add-btn {
     right: 27rem;
     top: 10.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .add-btn {
+    right: 20rem;
+    top: 7.8rem;
   }
 }
 .btn.add-btn:focus {
