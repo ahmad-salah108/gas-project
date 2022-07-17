@@ -27,6 +27,7 @@ body {
 }
 /* add button */
 .add-btn {
+  width: 146.9px;
   background: var(--main-gradient);
   margin-bottom: 20px;
   position: absolute;
@@ -39,10 +40,9 @@ body {
     top: 10.7rem;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 550px) {
   .add-btn {
-    right: 20rem;
-    top: 7.8rem;
+    right: 25rem;
   }
 }
 .btn.add-btn:focus {
