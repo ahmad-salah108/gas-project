@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>الأنابيب</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../css/bootstrap.rtl.min.css" />
     <!-- Google Fonts Cairo -->
@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <!-- DATATABLES -->
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
@@ -24,7 +25,6 @@
   </head>
   <body>
     <h1 class="heading">الأنابيب</h1>
-    <button type="button" class="btn btn-primary add-btn">+ إضافة صف جديد</button>
     <div class="table-container">
       <table class="table table-striped">
         <thead>
@@ -46,12 +46,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -61,12 +61,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -76,12 +76,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -91,12 +91,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -106,12 +106,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -121,12 +121,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -136,12 +136,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -151,12 +151,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -166,12 +166,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -181,12 +181,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -196,12 +196,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -211,12 +211,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -226,12 +226,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -241,12 +241,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -256,12 +256,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -271,12 +271,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -286,12 +286,12 @@
             <td>12كغم</td>
             <td>50</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
           <tr>
@@ -301,12 +301,12 @@
             <td>12كغم</td>
             <td>60</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm">
+              <button type="button" class="btn btn-success btn-sm" onclick="editBtns()">
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm">حذف</button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="deleteBtns()">حذف</button>
             </td>
           </tr>
         </tbody>
@@ -315,6 +315,7 @@
     <script src="../../js/jquery-3.6.0.min.js"></script>
     <script src="../../js/jquery.dataTables.min.js"></script>
     <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
     <script src="../../js/tables-script.js"></script>
   </body>
 </html>

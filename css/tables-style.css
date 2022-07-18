@@ -18,6 +18,12 @@ body {
   background-color: var(--body-background-color);
   padding: 30px;
 }
+.swal2-styled{
+  color: #ebe8e8 !important;
+}
+.swal2-styled.swal2-confirm{
+  background: var(--main-gradient) !important;
+}
 
 /* CONTENT */
 .heading {
@@ -26,26 +32,18 @@ body {
   margin-bottom: 30px;
 }
 /* add button */
-.add-btn {
+.btn-add {
   width: 146.9px;
   background: var(--main-gradient);
-  margin-bottom: 20px;
-  position: absolute;
-  right: 17rem;
-  z-index: 100;
 }
 @media (max-width: 640px) {
-  .add-btn {
-    right: 27rem;
-    top: 10.7rem;
+  .btn-add {
+    display: block;
+    margin: auto;
+    margin-top: 7px;
   }
 }
-@media (max-width: 550px) {
-  .add-btn {
-    right: 25rem;
-  }
-}
-.btn.add-btn:focus {
+.btn.btn-add:focus {
   box-shadow: 0 0 10px 0.2rem rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
 }
 /* search button */
@@ -59,8 +57,7 @@ body {
 }
 /* table */
 table.dataTable.no-footer {
-  border-bottom: none;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 tr {
   border-bottom: 1px solid #ccc;
@@ -69,12 +66,11 @@ tr {
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   color: #0183bf !important;
 }
-.dataTables_wrapper
-  .dataTables_paginate
-  .paginate_button:not(.disabled):not(.current):hover {
-  color: white !important;
-  border: 1px solid #ccc;
-  background: var(--main-gradient);
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: #0183bf !important;
+  border: 1px solid transparent;
+  background-color: transparent;
+  background: none;
 }
 .btn {
   color: #ebe8e8 !important;
@@ -93,10 +89,19 @@ tr {
 .disabled .page-link {
   color: var(--bs-pagination-disabled-color) !important;
 }
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+  padding: 5px 10px;
+}
 .nav-pagination {
   width: fit-content;
   margin: auto;
 }
-.dataTables_wrapper .dataTables_paginate .paginate_button.current {
-  background: linear-gradient(to bottom, #fff 0%, #0088c748 100%);
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #333 !important;
+  border: 1px solid #979797;
+  background-color: white;
+  background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%);
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:active{
+  box-shadow: none;
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <!-- Google Fonts Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/forms-style.css" />
+  </head>
+  <body>
+    <form class="col-lg-3 col-md-5 col-sm-6 col-7">
+      <div class="mb-3">
+        <label for="username" class="form-label">اسم المستخدم</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">كلمة المرور</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+        />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="remember" />
+        <label class="form-check-label" for="remember">تذكرني</label>
+      </div>
+      <button type="submit" class="btn btn-add" style="padding: 0.375rem 0.75rem; width: 100%;">تسجيل الدخول</button>
+    </form>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/forms-script.js"></script>
+  </body>
+</html>
