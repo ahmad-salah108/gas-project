@@ -1,31 +1,34 @@
+// load datatable
 $(document).ready(function () {
   $(".table-striped").DataTable();
 });
 
-window.onload = function () {
-  // create the btn-add
-  let btn = document.createElement("button");
-  btn.textContent = "+ إضافة صف جديد";
-  btn.setAttribute("type", "button");
-  btn.classList.add("btn", "btn-add");
-  setTimeout(() => {
-    // add class to search btn
-    document
-      .querySelector("#DataTables_Table_0_filter label input")
-      .classList.add("form-control");
-    // add the btn-add
-    document
-      .querySelector("#DataTables_Table_0_wrapper")
-      .insertBefore(btn, document.querySelector("#DataTables_Table_0_filter"));
-    // convert to form
-    document.querySelector(".btn-add").addEventListener("click", () => {
-      location.href = "tubes-form.html";
-    });
-  }, 100);
-};
+// load add button onload
+$(document).ready(loadBtn);
 
-function editBtns(){
-  location.href = 'tubes-edit.html';
+// add button load function
+function loadBtn() {
+  let btn = [];
+  $(".table-container").each(function (i, e) {
+    // create the btn-add
+    btn[i] = document.createElement("button");
+    btn[i].textContent = "+ إضافة صف جديد";
+    btn[i].setAttribute("type", "button");
+    btn[i].classList.add("btn", "btn-add");
+
+    setTimeout(() => {
+      // add class to search btn
+      $(`#DataTables_Table_${i}_filter label input`).addClass("form-control");
+      // add form-select class
+      $('.dataTables_length select').addClass('form-select');
+      // add the btn-add
+      $(`#DataTables_Table_${i}_filter`).before(btn[i]);
+    }, 100);
+  });
+}
+
+function editBtns() {
+  location.href = "tubes-edit.html";
 }
 
 function deleteBtns() {

@@ -6,8 +6,8 @@
   --main-gradient: linear-gradient(to bottom, #019be3, #0089c7);
   --color-text: #ebe8e8;
   --body-background-color: rgb(250, 250, 250);
-  --sidebar-background-color: #212529;
-  --navlink-background-color: #30363b;
+  --sidebar-background-color: #3a4248;
+  --navlink-background-color: #343a40;
 }
 * {
   margin: 0;
@@ -134,8 +134,19 @@ ul.nav.flex-column{
 .logout svg path{
   fill: var(--bs-danger);
 }
-.swal2-styled.swal2-confirm{
-  background: var(--main-gradient) !important;
+#exitModal .modal-header,
+#exitModal .modal-footer,
+#exitModal .modal-body{
+  border: none;
+  padding: 10px;
+}
+#exitModal .modal-footer {
+  justify-content: center;
+}
+#exitModal .modal-body {
+  text-align: center;
+  font-size: 19px;
+  color: #333;
 }
 
 /*

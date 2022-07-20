@@ -13,20 +13,15 @@ links.forEach(function(el){
   });
 });
 
-// LOGOUT BUTTON
-document.querySelector('.logout').addEventListener('click', function(){
-  Swal.fire({
-    title: 'هل تريد تسجيل الخروج؟',
-    confirmButtonText: 'نعم',
-    cancelButtonText: 'لا',
-    showCancelButton: true,
-    showCloseButton: true
-  })
-});
-
 // DIRECTING NAV LINKS
 document.querySelector('#tubes-link').addEventListener('click', function(){
-  document.querySelector('iframe').setAttribute('src', 'src/tubes/tubes.html');
+  document.querySelector('iframe').setAttribute('src', 'src/tubes.html');
+  if(document.body.offsetWidth <= 750){
+    document.querySelector('.navbar-toggler').click();
+  }
+});
+document.querySelector('#customers-link').addEventListener('click', function(){
+  document.querySelector('iframe').setAttribute('src', 'src/customers.html');
   if(document.body.offsetWidth <= 750){
     document.querySelector('.navbar-toggler').click();
   }

@@ -38,7 +38,23 @@
         <a class="navbar-brand me-0 px-3" href="#">اسم الشركة</a>
       </div>
     </header>
-
+    <!-- EXIT MODAL -->
+    <div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            هل تريد تسجيل الخروج؟
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">لا</button>
+            <button type="button" class="btn btn-primary">نعم</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid">
       <div class="row main-row">
         <nav id="sidebarMenu" class="d-md-block sidebar collapse">
@@ -48,13 +64,13 @@
             </div>
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a class="nav-link" aria-current="page" href="#">
                   <i class="fa-solid fa-home"></i>
                   الصفحة الرئيسية
                 </a>
               </li>
               <li class="nav-item">
-                <a id="tubes-link" class="nav-link" href="#">
+                <a id="tubes-link" class="nav-link active" href="#">
                   <i class="fa-solid fa-jar fa-lg" style="margin-right: 2px;"></i>
                   الأنابيب
                 </a>
@@ -66,7 +82,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a id="customers-link" class="nav-link" href="#">
                   <i class="fa-solid fa-users"></i>
                   الزبائن
                 </a>
@@ -90,7 +106,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a id="logout" class="nav-link logout" href="#">
+                <a id="logout" class="nav-link logout" href="#" data-bs-toggle="modal" data-bs-target="#exitModal">
                   <i class="fa-solid fa-arrow-right-from-bracket"></i>
                   تسجيل الخروج
                 </a>
@@ -101,7 +117,7 @@
 
         <main class="main-content">
           <iframe
-            src="src/tubes/tubes.html"
+            src="src/tubes.html"
             frameborder="0"
             width="100%"
             height="100%"
@@ -110,7 +126,6 @@
       </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
     <script src="js/dashboard.js"></script>
   </body>
 </html>

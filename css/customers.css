@@ -1,0 +1,23 @@
+.h3-heading{
+  position: relative;
+  background-color: rgba(1, 156, 228, 0.040);
+  width: fit-content;
+  padding: 10px 20px 10px 10px;
+  margin-bottom: 0;
+}
+.h3-heading::before{
+  content: '';
+  width: 10px;
+  height: 100%;
+  background: var(--main-gradient);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.form-control{
+  margin-left: 0.5em;
+}
+.btn-add{
+  transform: translateY(-1px);
+}
+

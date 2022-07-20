@@ -15,7 +15,7 @@
 }
 body {
   font-family: "Cairo", sans-serif;
-  background: var(--body-background-color);
+  background: #ddd;
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -65,4 +65,14 @@ input[type=number] {
 .btn-back{
   background: transparent;
   color: var(--main-color);
+}
+.btn.btn-back:hover{
+  color: #333;
+  border-color: transparent;
+}
+svg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
 }
