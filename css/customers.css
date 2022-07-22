@@ -19,8 +19,8 @@
 }
 .btn-add{
   transform: translateY(-1px);
-  min-width: 146.9px;
-  max-width: 146.9px;
+  min-width: 145.9px;
+  max-width: 145.9px;
 }
 @media (max-width: 640px) {
   .btn-add {
