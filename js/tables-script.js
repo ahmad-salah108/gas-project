@@ -44,24 +44,11 @@ function loadBtn() {
     setTimeout(() => {
       // add class to search btn
       $(`#DataTables_Table_${i}_filter label input`).addClass("form-control");
+      $(`#DataTables_Table_${i}_filter label input`).addClass("search-width");
       // add form-select class
       $('.dataTables_length select').addClass('form-select');
       // add the btn-add
       $(`#DataTables_Table_${i}_filter`).before(btn[i]);
     }, 100);
-  });
-}
-
-function editBtns() {
-  location.href = "tubes-edit.html";
-}
-
-function deleteBtns() {
-  Swal.fire({
-    title: "هل تريد حذف الصف؟",
-    confirmButtonText: "نعم",
-    cancelButtonText: "لا",
-    showCancelButton: true,
-    showCloseButton: true,
   });
 }

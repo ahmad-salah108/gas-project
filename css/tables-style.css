@@ -89,6 +89,9 @@ body {
   box-shadow: none;
 }
 /* search button */
+.search-width{
+  max-width: 194.8px;
+}
 .form-control {
   width: initial;
   display: inline-block;

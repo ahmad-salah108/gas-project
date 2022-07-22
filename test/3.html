@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body.darkmode{
+      background-color: #181818;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h2>test 3</h2>
+  <button class="btn">Change</button>
+  <script>
+    document.querySelector('button').addEventListener('click', ()=>{
+      location.href = '2.html';
+    });
+    if(localStorage.getItem('gas-darkmode') == 'enabled'){
+      document.body.classList.add('darkmode');
+    }
+  </script>
+</body>
+</html>

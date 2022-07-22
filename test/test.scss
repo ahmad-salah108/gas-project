@@ -1,0 +1,65 @@
+$width6: 0;
+@for $i from 1 through 15 {
+  $width6: $width6 + percentage(1/15);
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: $width6;
+  }
+}
+/****************************************/
+$width5: 0;
+@media (min-width: 576px) {
+  @for $i from 1 through 15 {
+    $width5: $width5 + percentage(1/15);
+    .col-sm-#{$i} {
+      flex: 0 0 auto;
+      width: $width5;
+    }
+  }
+}
+/*******************************************/
+
+/*********************************************/
+$width4: 0;
+@media (min-width: 768px) {
+  @for $i from 1 through 15 {
+    $width4: $width4 + percentage(1/15);
+    .col-md-#{$i} {
+      flex: 0 0 auto;
+      width: $width4;
+    }
+  }
+}
+/**********************************************/
+$width3: 0;
+@media (min-width: 992px) {
+  @for $i from 1 through 15 {
+    $width3: $width3 + percentage(1/15);
+    .col-lg-#{$i} {
+      flex: 0 0 auto;
+      width: $width3;
+    }
+  }
+}
+/**********************************************/
+$width2: 0;
+@media (min-width: 1200px) {
+  @for $i from 1 through 15 {
+    $width2: $width2 + percentage(1/15);
+    .col-xl-#{$i} {
+      flex: 0 0 auto;
+      width: $width2;
+    }
+  }
+}
+/**********************************/
+$width: 0;
+@media (min-width: 1400px) {
+  @for $i from 1 through 15 {
+    $width: $width + percentage(1/15);
+    .col-xxl-#{$i} {
+      flex: 0 0 auto;
+      width: $width;
+    }
+  }
+}
