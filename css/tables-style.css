@@ -6,7 +6,7 @@
   --border-bottom-color: #ddd;
   --main-gradient: rgb(28, 121, 213);
   --shadow: 0 0 10px 0.25rem rgb(13 110 253 / 10%);
-  --section-margin: 30px;
+  --section-margin: 20px;
   --light-blue: #e5f5fc;
 }
 * {
@@ -21,7 +21,7 @@ body {
   padding: 16px;
 }
 .body-padding-top{
-  padding-top: 97.2px;
+  padding-top: 87.2px;
 }
 .btn-check:focus+.btn-add,
 .btn-add:focus,
@@ -42,10 +42,8 @@ body {
   background-color: #fff;
   padding: 20px;
   border-top: 2px solid var(--main-color);
-  border-radius: 0 0 0.5rem 0.5rem;
   margin-bottom: var(--section-margin);
   overflow: auto;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.156);
 }
 
 /* CONTENT */
@@ -89,6 +87,9 @@ body {
   box-shadow: none;
 }
 /* search button */
+.search-width{
+  max-width: 194.8px;
+}
 .form-control {
   width: initial;
   display: inline-block;

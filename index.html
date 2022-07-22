@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <meta name="generator" content="Hugo 0.88.1" />
-    <title>اسم الشركة</title>
+    <title>غاز الشرق الاوسط</title>
     <!-- Fontawesome -->
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- Bootstrap CSS -->
@@ -15,6 +15,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts Reem Kufi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <!-- Custom styles -->
@@ -31,24 +38,39 @@
         aria-expanded="false"
         aria-label="عرض/إخفاء لوحة التنقل"
       >
-        <span class="navbar-toggler-icon"></span>
+        <i class="fa-solid fa-bars fa-xl"></i>
       </button>
       <div class="my-logo">
-        <a class="navbar-brand me-0 px-3" href="#">اسم الشركة</a>
+        <a class="navbar-brand me-0" href="#">غاز الشرق الاوسط</a>
       </div>
     </header>
     <!-- EXIT MODAL -->
-    <div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="exitModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-          <div class="modal-body">
-            هل تريد تسجيل الخروج؟
-          </div>
+          <div class="modal-body">هل تريد تسجيل الخروج؟</div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">لا</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              لا
+            </button>
             <button type="button" class="btn btn-primary">نعم</button>
           </div>
         </div>
@@ -59,55 +81,75 @@
         <nav id="sidebarMenu" class="d-md-block sidebar collapse">
           <div class="position-sticky pt-3">
             <div class="logo-darkmode">
-              <a class="navbar-brand me-0 px-3" href="#">اسم الشركة</a>
+              <a class="navbar-brand me-0" href="#"
+                >غاز الشرق<span style="color: var(--main-color); display: block"
+                  >الاوسط</span
+                ></a
+              >
+              <button class="btn-menu">
+                <i class="fa-solid fa-arrow-right fa-lg"></i>
+                <i
+                  class="fa-solid fa-arrow-left fa-lg"
+                  style="display: none"
+                ></i>
+              </button>
             </div>
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">
                   <i class="fa-solid fa-home"></i>
-                  الصفحة الرئيسية
+                  <span class="nav-link-name">الصفحة الرئيسية</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a id="tubes-link" class="nav-link active" href="#">
-                  <i class="fa-solid fa-jar fa-lg" style="margin-right: 2px;"></i>
-                  الأنابيب
+                  <i
+                    class="fa-solid fa-jar fa-lg"
+                    style="margin-right: 2px"
+                  ></i>
+                  <span class="nav-link-name">الأنابيب</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a id="store-link" class="nav-link" href="#">
                   <i class="fa-solid fa-warehouse"></i>
-                  المخزن
+                  <span class="nav-link-name">المخزن</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a id="customers-link" class="nav-link" href="#">
                   <i class="fa-solid fa-users"></i>
-                  الزبائن
+                  <span class="nav-link-name">الزبائن</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a id="branches-link" class="nav-link" href="#">
                   <i class="fa-solid fa-code-branch"></i>
-                  الفروع
+                  <span class="nav-link-name">الفروع</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a id="distribution-link" class="nav-link" href="#">
                   <i class="fa-solid fa-truck"></i>
-                  التوزيع
+                  <span class="nav-link-name">التوزيع</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a id="employees-link" class="nav-link" href="#">
                   <i class="fa-solid fa-user-group"></i>
-                  الموظفين
+                  <span class="nav-link-name">الموظفين</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a id="logout" class="nav-link logout" href="#" data-bs-toggle="modal" data-bs-target="#exitModal">
+                <a
+                  id="logout"
+                  class="nav-link logout"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exitModal"
+                >
                   <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                  تسجيل الخروج
+                  <span class="nav-link-name">تسجيل الخروج</span>
                 </a>
               </li>
             </ul>

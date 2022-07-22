@@ -4,14 +4,12 @@ setTimeout(() => {
     document.body.classList.add('body-padding-top');
   }else{
     document.body.classList.remove('body-padding-top');
-    console.log('out');
   }
   window.ondeviceorientation = function(){
     if(localStorage.getItem('body-padding-top') == 'true'){
       document.body.classList.add('body-padding-top');
     }else{
       document.body.classList.remove('body-padding-top');
-      console.log('in');
     }
   }
   window.onresize = function(){
@@ -19,7 +17,6 @@ setTimeout(() => {
       document.body.classList.add('body-padding-top');
     }else{
       document.body.classList.remove('body-padding-top');
-      console.log('in');
     }
   }
 }, 100);
@@ -44,24 +41,11 @@ function loadBtn() {
     setTimeout(() => {
       // add class to search btn
       $(`#DataTables_Table_${i}_filter label input`).addClass("form-control");
+      $(`#DataTables_Table_${i}_filter label input`).addClass("search-width");
       // add form-select class
       $('.dataTables_length select').addClass('form-select');
       // add the btn-add
       $(`#DataTables_Table_${i}_filter`).before(btn[i]);
     }, 100);
-  });
-}
-
-function editBtns() {
-  location.href = "tubes-edit.html";
-}
-
-function deleteBtns() {
-  Swal.fire({
-    title: "هل تريد حذف الصف؟",
-    confirmButtonText: "نعم",
-    cancelButtonText: "لا",
-    showCancelButton: true,
-    showCloseButton: true,
   });
 }

@@ -1,12 +1,14 @@
 // PADDING TOP IN MOBILE
 if(document.body.offsetWidth <= 767.9){
   localStorage.setItem('body-padding-top', 'true');
+  document.querySelector('#sidebarMenu').classList.remove('compressed');
 }else{
   localStorage.setItem('body-padding-top', 'false')
 }
 window.ondeviceorientation = function(){
   if(document.body.offsetWidth <= 767.9){
     localStorage.setItem('body-padding-top', 'true');
+    document.querySelector('#sidebarMenu').classList.remove('compressed');
   }else{
     localStorage.setItem('body-padding-top', 'false')
   }
@@ -14,6 +16,7 @@ window.ondeviceorientation = function(){
 window.onresize = function(){
   if(document.body.offsetWidth <= 767.9){
     localStorage.setItem('body-padding-top', 'true');
+    document.querySelector('#sidebarMenu').classList.remove('compressed');
   }else{
     localStorage.setItem('body-padding-top', 'false')
   }
@@ -70,4 +73,9 @@ document.querySelector('#employees-link').addEventListener('click', function(){
   if(document.body.offsetWidth <= 767.9){
     document.querySelector('.navbar-toggler').click();
   }
+});
+
+// 
+document.querySelector('.btn-menu').addEventListener('click', function(){
+  document.querySelector('#sidebarMenu').classList.toggle('compressed');
 });
