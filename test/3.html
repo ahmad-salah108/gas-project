@@ -13,7 +13,21 @@
   </style>
 </head>
 <body>
-  <h2>test 3</h2>
+
+  <a id="tubes-link" class="nav-link active" href="#">
+    <i
+      class="fa-solid fa-jar fa-lg"
+      style="margin-right: 2px"
+    ></i>
+    الأنابيب
+  </a>
+
+  <script>
+    document.querySelector('a').textContent = '';
+    console.log(document.querySelector('a').textContent);
+  </script>
+
+  <!-- <h2>test 3</h2>
   <button class="btn">Change</button>
   <script>
     document.querySelector('button').addEventListener('click', ()=>{
@@ -22,6 +36,6 @@
     if(localStorage.getItem('gas-darkmode') == 'enabled'){
       document.body.classList.add('darkmode');
     }
-  </script>
+  </script> -->
 </body>
 </html>

@@ -33,9 +33,10 @@
   z-index: 100;
   background-color: var(--light-blue);
   border-radius: 0;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 16%);
 }
 .body-padding-top .sticky-nav{
-  top: 65.2px;
+  top: 57.6px;
 }
 .flex-nav{
   display: flex;

@@ -4,14 +4,12 @@ setTimeout(() => {
     document.body.classList.add('body-padding-top');
   }else{
     document.body.classList.remove('body-padding-top');
-    console.log('out');
   }
   window.ondeviceorientation = function(){
     if(localStorage.getItem('body-padding-top') == 'true'){
       document.body.classList.add('body-padding-top');
     }else{
       document.body.classList.remove('body-padding-top');
-      console.log('in');
     }
   }
   window.onresize = function(){
@@ -19,7 +17,6 @@ setTimeout(() => {
       document.body.classList.add('body-padding-top');
     }else{
       document.body.classList.remove('body-padding-top');
-      console.log('in');
     }
   }
 }, 100);
