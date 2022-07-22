@@ -1,3 +1,17 @@
+// PADDING TOP IN MOBILE
+if(localStorage.getItem('body-padding-top') == 'true'){
+  document.body.classList.add('body-padding-top');
+}else{
+  document.body.classList.remove('body-padding-top')
+}
+window.onresize = function(){
+  if(localStorage.getItem('body-padding-top') == 'true'){
+    document.body.classList.add('body-padding-top');
+  }else{
+    document.body.classList.remove('body-padding-top')
+  }
+}
+
 // load datatable
 $(document).ready(function () {
   $(".table-striped").DataTable();
@@ -22,13 +36,3 @@ $(document).ready(function () {
     $(".dataTables_length select").addClass("form-select");
   }, 100);
 });
-
-// function deleteBtns() {
-//   Swal.fire({
-//     title: "هل تريد حذف الصف؟",
-//     confirmButtonText: "نعم",
-//     cancelButtonText: "لا",
-//     showCancelButton: true,
-//     showCloseButton: true,
-//   });
-// }

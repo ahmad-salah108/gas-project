@@ -1,16 +1,13 @@
 /* GENERAL */
 :root {
-  --main-color: #0089c7;
+  --main-color: rgb(28, 121, 213);
   --color-text: #333;
-  --body-background-color: rgb(240, 240, 240);
+  --body-background-color: rgb(230, 230, 230);
   --border-bottom-color: #ddd;
-  --main-gradient: linear-gradient(
-    to bottom,
-    hsl(199, 99%, 45%),
-    hsl(199, 100%, 39%)
-  );
+  --main-gradient: rgb(28, 121, 213);
   --shadow: 0 0 10px 0.25rem rgb(13 110 253 / 10%);
   --section-margin: 30px;
+  --light-blue: #e5f5fc;
 }
 * {
   margin: 0;
@@ -21,13 +18,22 @@
 body {
   font-family: "Cairo", sans-serif;
   background-color: var(--body-background-color);
-  padding: 30px;
+  padding: 16px;
+}
+.body-padding-top{
+  padding-top: 97.2px;
+}
+.btn-check:focus+.btn-add,
+.btn-add:focus,
+.btn-add:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
 }
 .btn-primary {
   background: var(--main-gradient);
 }
 .btn-primary:focus {
-  box-shadow: 0 0 10px 0.25rem rgb(13 110 253 / 20%);
+  box-shadow: none;
 }
 .btn:active:focus {
   box-shadow: none;
@@ -39,12 +45,7 @@ body {
   border-radius: 0 0 0.5rem 0.5rem;
   margin-bottom: var(--section-margin);
   overflow: auto;
-}
-.swal2-styled {
-  color: #ebe8e8 !important;
-}
-.swal2-styled.swal2-confirm {
-  background: var(--main-gradient) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.156);
 }
 
 /* CONTENT */
@@ -61,7 +62,7 @@ body {
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid hsl(199, 99%, 45%);
+  border-right: 15px solid rgb(28, 121, 213);
   position: absolute;
   right: 10px;
   top: 50%;
@@ -71,7 +72,6 @@ body {
 .btn-add {
   min-width: 146.9px;
   background: var(--main-gradient);
-  box-shadow: 0 2px 10px #0000002e;
   transition: box-shadow 0.3s;
   border: none;
 }
@@ -199,7 +199,7 @@ tr {
   color: #333 !important;
   border: 1px solid #ccc;
   background: none;
-  background-color: rgba(1, 156, 228, 0.04);
+  background-color: var(--light-blue);
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:active {
   box-shadow: none;

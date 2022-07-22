@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الفروع</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+    <!-- Google Fonts Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- DATATABLES -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+    />
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../css/tables-style.css" />
+  </head>
+  <body>
+    <h1 class="heading">الفروع</h1>
+    <!-- ADD MODAL -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">إضافة فرع جديد</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form class="row">
+                <div class="col-md-6">
+                  <label for="branch-id" class="form-label">رقم الفرع</label>
+                  <input type="text" class="form-control" id="branch-id" name="branch-id" />
+                </div>
+                <div class="col-md-6">
+                  <label for="branch-name" class="form-label">اسم الفرع</label>
+                  <input type="text" class="form-control" id="branch-name" name="branch-name"/>
+                </div>
+                <div class="col-md-6">
+                  <label for="tube-id" class="form-label">رقم الانبوبة</label>
+                  <input type="text" class="form-control" id="tube-id" name="tube-id"/>
+                </div>
+                <div class="col-md-6">
+                  <label for="tube-counts" class="form-label">عدد الانابيب</label>
+                  <input type="text" class="form-control" id="tube-counts" name="tube-counts"/>
+                </div>
+                <div class="col-md-6">
+                  <label for="employee-name" class="form-label">اسم موظف الفرع</label>
+                  <input type="text" class="form-control" id="employee-name" name="employee-name"/>
+                </div>
+                <div class="col-md-6">
+                  <label for="employee-id" class="form-label">رقم موظف الفرع</label>
+                  <input type="text" class="form-control" id="employee-id" name="employee-id"/>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+            <button type="button" class="btn btn-primary">إضافة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- DELETE MODAL -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            هل تريد حذف الصف؟
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">لا</button>
+            <button type="button" class="btn btn-primary">نعم</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EDIT MODAL -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">تعديل الفرع</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form class="row">
+                <div class="col-md-6">
+                  <label for="edit-branch-id" class="form-label">رقم الفرع</label>
+                  <input type="text" class="form-control" id="edit-branch-id" name="edit-branch-id" />
+                </div>
+                <div class="col-md-6">
+                  <label for="edit-branch-name" class="form-label">اسم الفرع</label>
+                  <input type="text" class="form-control" id="edit-branch-name" name="edit-branch-name"/>
+                </div>
+                <div class="col-md-6">
+                  <label for="edit-tube-id" class="form-label">رقم الانبوبة</label>
+                  <input type="text" class="form-control" id="edit-tube-id" name="edit-tube-id"/>
+                </div>
+                <div class="col-md-6">
+                  <label for="edit-tube-counts" class="form-label">عدد الانابيب</label>
+                  <input type="text" class="form-control" id="edit-tube-counts" name="edit-tube-counts"/>
+                </div>
+                <div class="col-md-6">
+                  <label for="edit-employee-name" class="form-label">اسم موظف الفرع</label>
+                  <input type="text" class="form-control" id="edit-employee-name" name="edit-employee-name"/>
+                </div>
+                <div class="col-md-6">
+                  <label for="edit-employee-id" class="form-label">رقم موظف الفرع</label>
+                  <input type="text" class="form-control" id="edit-employee-id" name="edit-employee-id"/>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+            <button type="button" class="btn btn-primary">تعديل</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table-container section-style">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">الرقم</th>
+            <th scope="col">رقم الفرع</th>
+            <th scope="col">اسم الفرع</th>
+            <th scope="col">رقم الانبوبة</th>
+            <th scope="col">عدد الانابيب</th>
+            <th scope="col">اسم موظف الفرع</th>
+            <th scope="col">رقم موظف الفرع</th>
+            <th scope="col">تعديل</th>
+            <th scope="col">حذف</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>12كغم</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/tables-script.js"></script>
+    <script>
+      $(document).ready(function(){
+        setTimeout(() => {
+          $('.table-container .btn-add').attr('data-bs-toggle', 'modal');
+          $('.table-container .btn-add').attr('data-bs-target', '#addModal');
+          $('.table-container .btn-add').text('+ إضافة فرع جديد');
+        }, 100);
+      });
+    </script>
+  </body>
+</html>

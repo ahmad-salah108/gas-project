@@ -38,15 +38,15 @@
               <form class="row">
                 <div class="col-md-12">
                   <label for="barcode" class="form-label">الباركود</label>
-                  <input type="file" class="form-control" id="barcode" />
+                  <input type="file" class="form-control" id="barcode" name="barcode" />
                 </div>
                 <div class="col-md-12">
                   <label for="tube-status" class="form-label">حالة الانبوبة</label>
-                  <input type="text" class="form-control" id="tube-status" />
+                  <input type="text" class="form-control" id="tube-status" name="tube-status" />
                 </div>
                 <div class="col-md-12">
                   <label for="kilo-cost" class="form-label">سعر كيلو الغاز</label>
-                  <input type="number" class="form-control" id="kilo-cost" />
+                  <input type="number" class="form-control" id="kilo-cost" name="kilo-cost" />
                 </div>
                 <div class="col-6">
                   <label for="full-weight" class="form-label">وزن الانبوبة كامل (كغم)</label>
@@ -54,6 +54,7 @@
                     type="number"
                     class="form-control"
                     id="full-weight"
+                    name="full-weight"
                   />
                 </div>
                 <div class="col-6">
@@ -62,6 +63,7 @@
                     type="number"
                     class="form-control"
                     id="gas-weight"
+                    name="gas-weight"
                   />
                 </div>
               </form>
@@ -103,31 +105,33 @@
             <div class="container-fluid">
               <form class="row">
                 <div class="col-md-12">
-                  <label for="barcode" class="form-label">الباركود</label>
-                  <input type="file" class="form-control" id="barcode" />
+                  <label for="edit-barcode" class="form-label">الباركود</label>
+                  <input type="file" class="form-control" id="edit-barcode" name="edit-barcode" />
                 </div>
                 <div class="col-md-12">
-                  <label for="tube-status" class="form-label">حالة الانبوبة</label>
-                  <input type="text" class="form-control" id="tube-status" />
+                  <label for="edit-tube-status" class="form-label">حالة الانبوبة</label>
+                  <input type="text" class="form-control" id="edit-tube-status" name="edit-tube-status" />
                 </div>
                 <div class="col-md-12">
-                  <label for="kilo-cost" class="form-label">سعر كيلو الغاز</label>
-                  <input type="number" class="form-control" id="kilo-cost" />
+                  <label for="edit-kilo-cost" class="form-label">سعر كيلو الغاز</label>
+                  <input type="number" class="form-control" id="edit-kilo-cost" name="edit-kilo-cost" />
                 </div>
                 <div class="col-6">
-                  <label for="full-weight" class="form-label">وزن الانبوبة كامل (كغم)</label>
+                  <label for="edit-full-weight" class="form-label">وزن الانبوبة كامل (كغم)</label>
                   <input
                     type="number"
                     class="form-control"
-                    id="full-weight"
+                    id="edit-full-weight"
+                    name="edit-full-weight"
                   />
                 </div>
                 <div class="col-6">
-                  <label for="gas-weight" class="form-label">كمية الغاز داخل الانبوبة (كغم)</label>
+                  <label for="edit-gas-weight" class="form-label">كمية الغاز داخل الانبوبة (كغم)</label>
                   <input
                     type="number"
                     class="form-control"
-                    id="gas-weight"
+                    id="edit-gas-weight"
+                    name="edit-gas-weight"
                   />
                 </div>
               </form>
@@ -155,6 +159,230 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>ممتلئة</td>
+            <td>12كغم</td>
+            <td>60</td>
+            <td>99</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+            </td>
+          </tr>
           <tr>
             <th scope="row">1</th>
             <td>Mark</td>
