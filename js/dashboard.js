@@ -1,24 +1,26 @@
 // PADDING TOP IN MOBILE
-if(document.body.offsetWidth <= 767.9){
-  localStorage.setItem('body-padding-top', 'true');
-  document.querySelector('#sidebarMenu').classList.remove('compressed');
-}else{
-  localStorage.setItem('body-padding-top', 'false')
-}
-window.ondeviceorientation = function(){
+window.onload = function(){
   if(document.body.offsetWidth <= 767.9){
     localStorage.setItem('body-padding-top', 'true');
     document.querySelector('#sidebarMenu').classList.remove('compressed');
   }else{
     localStorage.setItem('body-padding-top', 'false')
   }
-}
-window.onresize = function(){
-  if(document.body.offsetWidth <= 767.9){
-    localStorage.setItem('body-padding-top', 'true');
-    document.querySelector('#sidebarMenu').classList.remove('compressed');
-  }else{
-    localStorage.setItem('body-padding-top', 'false')
+  window.ondeviceorientation = function(){
+    if(document.body.offsetWidth <= 767.9){
+      localStorage.setItem('body-padding-top', 'true');
+      document.querySelector('#sidebarMenu').classList.remove('compressed');
+    }else{
+      localStorage.setItem('body-padding-top', 'false')
+    }
+  }
+  window.onresize = function(){
+    if(document.body.offsetWidth <= 767.9){
+      localStorage.setItem('body-padding-top', 'true');
+      document.querySelector('#sidebarMenu').classList.remove('compressed');
+    }else{
+      localStorage.setItem('body-padding-top', 'false')
+    }
   }
 }
 

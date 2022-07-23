@@ -19,6 +19,18 @@ body {
   font-family: "Cairo", sans-serif;
   background-color: var(--body-background-color);
   padding: 16px;
+  overflow: hidden;
+}
+.loading-screen{
+  background: var(--body-background-color);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4444;
+  display: grid;
+  place-items: center;
 }
 .body-padding-top{
   padding-top: 87.2px;
@@ -44,6 +56,9 @@ body {
   border-top: 2px solid var(--main-color);
   margin-bottom: var(--section-margin);
   overflow: auto;
+}
+.no-wrap{
+  white-space: nowrap;
 }
 
 /* CONTENT */
@@ -157,6 +172,7 @@ form.row>*{
 /* table */
 table.dataTable.no-footer {
   padding-top: 20px;
+  font-size: 0.9rem;
 }
 tr {
   border-bottom: 1px solid #ccc;
