@@ -1,26 +1,18 @@
 // PADDING TOP IN MOBILE
 window.onload = function(){
-  if(document.body.offsetWidth <= 767.9){
-    localStorage.setItem('body-padding-top', 'true');
-    document.querySelector('#sidebarMenu').classList.remove('compressed');
-  }else{
-    localStorage.setItem('body-padding-top', 'false')
-  }
+  setPaddinglocalStorage();
   window.ondeviceorientation = function(){
-    if(document.body.offsetWidth <= 767.9){
-      localStorage.setItem('body-padding-top', 'true');
-      document.querySelector('#sidebarMenu').classList.remove('compressed');
-    }else{
-      localStorage.setItem('body-padding-top', 'false')
-    }
+    setPaddinglocalStorage();
   }
   window.onresize = function(){
-    if(document.body.offsetWidth <= 767.9){
-      localStorage.setItem('body-padding-top', 'true');
-      document.querySelector('#sidebarMenu').classList.remove('compressed');
-    }else{
-      localStorage.setItem('body-padding-top', 'false')
-    }
+    setPaddinglocalStorage();
+  }
+}
+function setPaddinglocalStorage(){
+  if(document.body.offsetWidth <= 767.9){
+    localStorage.setItem('body-padding-top', 'true');
+  }else{
+    localStorage.setItem('body-padding-top', 'false')
   }
 }
 
@@ -40,44 +32,24 @@ links.forEach(function(el){
 });
 
 // DIRECTING SIDEBAR LINKS
-document.querySelector('#tubes-link').addEventListener('click', function(){
-  document.querySelector('iframe').setAttribute('src', 'src/tubes.html');
-  if(document.body.offsetWidth <= 767.9){
-    document.querySelector('.navbar-toggler').click();
-  }
-});
-document.querySelector('#customers-link').addEventListener('click', function(){
-  document.querySelector('iframe').setAttribute('src', 'src/customers.html');
-  if(document.body.offsetWidth <= 767.9){
-    document.querySelector('.navbar-toggler').click();
-  }
-});
-document.querySelector('#store-link').addEventListener('click', function(){
-  document.querySelector('iframe').setAttribute('src', 'src/warehouse.html');
-  if(document.body.offsetWidth <= 767.9){
-    document.querySelector('.navbar-toggler').click();
-  }
-});
-document.querySelector('#branches-link').addEventListener('click', function(){
-  document.querySelector('iframe').setAttribute('src', 'src/branches.html');
-  if(document.body.offsetWidth <= 767.9){
-    document.querySelector('.navbar-toggler').click();
-  }
-});
-document.querySelector('#distribution-link').addEventListener('click', function(){
-  document.querySelector('iframe').setAttribute('src', 'src/distribution.html');
-  if(document.body.offsetWidth <= 767.9){
-    document.querySelector('.navbar-toggler').click();
-  }
-});
-document.querySelector('#employees-link').addEventListener('click', function(){
-  document.querySelector('iframe').setAttribute('src', 'src/employees.html');
-  if(document.body.offsetWidth <= 767.9){
-    document.querySelector('.navbar-toggler').click();
-  }
-});
+sidebarLinks('#tubes-link', 'tubes.html');
+sidebarLinks('#customers-link', 'customers.html');
+sidebarLinks('#store-link', 'warehouse.html');
+sidebarLinks('#branches-link', 'branches.html');
+sidebarLinks('#distribution-link', 'distribution.html');
+sidebarLinks('#employees-link', 'employees.html');
+sidebarLinks('#home-link', 'home.html');
 
-// 
-document.querySelector('.btn-menu').addEventListener('click', function(){
+function sidebarLinks(id, dest){
+  document.querySelector(id).addEventListener('click', function(){
+    document.querySelector('iframe').setAttribute('src', `src/${dest}`);
+    if(document.body.offsetWidth <= 767.9){
+      document.querySelector('.navbar-toggler').click();
+    }
+  });
+}
+
+// toggle compressed
+document.querySelector('.btn-compressed').addEventListener('click', function(){
   document.querySelector('#sidebarMenu').classList.toggle('compressed');
 });

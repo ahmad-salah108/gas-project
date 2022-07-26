@@ -1,30 +1,28 @@
 // PADDING TOP IN MOBILE
 window.onload = function(){
   setTimeout(() => {
-    if (localStorage.getItem("body-padding-top") == "true") {
-      document.body.classList.add("body-padding-top");
-    } else {
-      document.body.classList.remove("body-padding-top");
-    }
+    getPaddinglocalStorage();
     window.ondeviceorientation = function () {
-      if (localStorage.getItem("body-padding-top") == "true") {
-        document.body.classList.add("body-padding-top");
-      } else {
-        document.body.classList.remove("body-padding-top");
-      }
+      getPaddinglocalStorage();
     };
     window.onresize = function () {
-      if (localStorage.getItem("body-padding-top") == "true") {
-        document.body.classList.add("body-padding-top");
-      } else {
-        document.body.classList.remove("body-padding-top");
-      }
+      getPaddinglocalStorage();
     };
   }, 100);
+}
+function getPaddinglocalStorage(){
+  if (localStorage.getItem("body-padding-top") == "true") {
+    document.body.classList.add("body-padding-top");
+  } else {
+    document.body.classList.remove("body-padding-top");
+  }
 }
 
 // load datatable
 $(document).ready(function () {
+  // add no-wrap class
+  noWrap();
+  // load data table
   $(".table-striped").DataTable();
   let btn = [];
   let container = [];
@@ -50,10 +48,6 @@ $(document).ready(function () {
       // add the container
       $(`#DataTables_Table_${i}`).before(container[i]);
       $(container[i]).append($(`#DataTables_Table_${i}`));
-      // add no-wrap class
-      noWrap();
-      document.querySelector('.table-container').addEventListener('click', noWrap);
-      document.querySelector('.search-width').addEventListener('keyup', noWrap);
     }, 100);
   });
   $('.loading-screen').hide();

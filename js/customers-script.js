@@ -1,30 +1,27 @@
 // PADDING TOP IN MOBILE
-window.onload = function () {
+window.onload = function(){
   setTimeout(() => {
-    if (localStorage.getItem("body-padding-top") == "true") {
-      document.body.classList.add("body-padding-top");
-    } else {
-      document.body.classList.remove("body-padding-top");
-    }
+    getPaddinglocalStorage();
     window.ondeviceorientation = function () {
-      if (localStorage.getItem("body-padding-top") == "true") {
-        document.body.classList.add("body-padding-top");
-      } else {
-        document.body.classList.remove("body-padding-top");
-      }
+      getPaddinglocalStorage();
     };
     window.onresize = function () {
-      if (localStorage.getItem("body-padding-top") == "true") {
-        document.body.classList.add("body-padding-top");
-      } else {
-        document.body.classList.remove("body-padding-top");
-      }
+      getPaddinglocalStorage();
     };
   }, 100);
-};
+}
+function getPaddinglocalStorage(){
+  if (localStorage.getItem("body-padding-top") == "true") {
+    document.body.classList.add("body-padding-top");
+  } else {
+    document.body.classList.remove("body-padding-top");
+  }
+}
 
 // LOAD TABLE
 $(document).ready(function () {
+  // add no-wrap class
+  noWrap();
   // load datatable
   $(".table-striped").DataTable();
   setTimeout(() => {
@@ -48,11 +45,6 @@ $(document).ready(function () {
     });
     // add form-select class
     $(".dataTables_length select").addClass("form-select");
-    noWrap();
-    document
-      .querySelector(".table-container")
-      .addEventListener("click", noWrap);
-    document.querySelector(".search-width").addEventListener("keyup", noWrap);
 
     // add overflow table container
     let container = [];
@@ -71,18 +63,20 @@ $(document).ready(function () {
 });
 
 function noWrap() {
-  let noWrapIndex = [];
-  document.querySelectorAll("thead tr th").forEach((element, index) => {
-    if (element.classList.contains("no-wrap")) {
-      noWrapIndex.push(index);
-    }
-  });
-  document.querySelectorAll("tbody tr").forEach((myele, myindex) => {
-    noWrapIndex.forEach((element, index) => {
-      myele.querySelectorAll("td").forEach((e, i) => {
-        if (i == element) {
-          e.classList.add("no-wrap");
-        }
+  $('.table').each((i, e)=>{
+    let noWrapIndex = [];
+    e.querySelectorAll("thead tr th").forEach((element, index) => {
+      if (element.classList.contains("no-wrap")) {
+        noWrapIndex.push(index);
+      }
+    });
+    e.querySelectorAll("tbody tr").forEach((myele, myindex) => {
+      noWrapIndex.forEach((element, index) => {
+        myele.querySelectorAll("td").forEach((e, i) => {
+          if (i == element) {
+            e.classList.add("no-wrap");
+          }
+        });
       });
     });
   });

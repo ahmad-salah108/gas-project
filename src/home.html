@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الصفحة الرئيسية</title>
+    <!-- Google Fonts Cairo -->
+    <link rel="preload" href="https://fonts.googleapis.com" />
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../css/tables-style.css" />
+    <link rel="stylesheet" href="../css/home-style.css" />
+  </head>
+  <body>
+    <div class="loading-screen">
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem; color: var(--main-color) !important"
+        role="status"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <main class="grid text-center">
+      <div class="info-box row g-col-sm-2">
+        <div class="col">
+          <span data-goal="">0</span>
+          <strong>المبلغ المالي</strong>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-money-bills"></i>
+        </div>
+      </div>
+      <div class="info-box row g-col-sm-2">
+        <div class="col">
+          <span data-goal="">0</span>
+          <strong>المبلغ المالي</strong>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-money-bills"></i>
+        </div>
+      </div>
+      <div class="info-box row g-col-sm-2">
+        <div class="col">
+          <span data-goal="">0</span>
+          <strong>المبلغ المالي</strong>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-money-bills"></i>
+        </div>
+      </div>
+      <div class="info-box row g-col-sm-2">
+        <div class="col">
+          <span data-goal="">0</span>
+          <strong>المبلغ المالي</strong>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-money-bills"></i>
+        </div>
+      </div>
+    </main>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/all.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".loading-screen").hide();
+        $(document.body).css("overflow", "auto");
+      });
+
+      window.onload = function () {
+        setTimeout(() => {
+          getPaddinglocalStorage();
+          window.ondeviceorientation = function () {
+            getPaddinglocalStorage();
+          };
+          window.onresize = function () {
+            getPaddinglocalStorage();
+          };
+        }, 100);
+      };
+      function getPaddinglocalStorage() {
+        if (localStorage.getItem("body-padding-top") == "true") {
+          document.body.classList.add("body-padding-top");
+        } else {
+          document.body.classList.remove("body-padding-top");
+        }
+      }
+    </script>
+  </body>
+</html>
