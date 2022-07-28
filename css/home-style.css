@@ -1,0 +1,38 @@
+body{
+  padding: 30px;
+}
+.row>*{
+  padding: 0;
+  margin: 0;
+}
+.row{
+  padding: 0;
+  margin: 0;
+}
+.info-box{
+  height: 130px;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.067);
+}
+.info-box>div{
+  display: grid;
+  place-items: center;
+}
+.info-box svg{
+  font-size: 2.5rem;
+}
+.info-box svg path{
+  fill: var(--main-color);
+}
+.info-box span{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.info-box strong{
+  font-weight: normal;
+  color: #999 !important;
+}

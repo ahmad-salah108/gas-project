@@ -1,6 +1,6 @@
 /* GENERAL */
 :root {
-  --main-color: rgb(28, 121, 213);
+  --main-color: #1c79d5;
   --color-text: #333;
   --body-background-color: rgb(230, 230, 230);
   --border-bottom-color: #ddd;
@@ -19,6 +19,18 @@ body {
   font-family: "Cairo", sans-serif;
   background-color: var(--body-background-color);
   padding: 16px;
+  overflow: hidden;
+}
+.loading-screen{
+  background: var(--body-background-color);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4444;
+  display: grid;
+  place-items: center;
 }
 .body-padding-top{
   padding-top: 87.2px;
@@ -44,6 +56,9 @@ body {
   border-top: 2px solid var(--main-color);
   margin-bottom: var(--section-margin);
   overflow: auto;
+}
+.no-wrap{
+  white-space: nowrap;
 }
 
 /* CONTENT */
@@ -155,8 +170,17 @@ form.row>*{
   margin-top: 1rem;
 }
 /* table */
+.table{
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.03);
+}
 table.dataTable.no-footer {
   padding-top: 20px;
+  font-size: 0.9rem;
+  border-bottom: none;
+}
+table.dataTable thead th,
+table.dataTable thead td{
+  border-bottom: 1px solid #888;
 }
 tr {
   border-bottom: 1px solid #ccc;

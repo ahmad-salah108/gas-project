@@ -5,51 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>الأنابيب</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
     <!-- Google Fonts Cairo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com" />
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
     <!-- DATATABLES -->
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
     />
-    
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="../css/tables-style.css" />
   </head>
   <body>
+    <div class="loading-screen">
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem; color: var(--main-color) !important"
+        role="status"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
     <h1 class="heading">الأنابيب</h1>
     <!-- ADD MODAL -->
-    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div
+      class="modal fade"
+      id="addModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+      >
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">إضافة انبوبة جديدة</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="exampleModalLabel">
+              إضافة انبوبة جديدة
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <div class="container-fluid">
               <form class="row">
                 <div class="col-md-12">
                   <label for="barcode" class="form-label">الباركود</label>
-                  <input type="file" class="form-control" id="barcode" name="barcode" />
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="barcode"
+                    name="barcode"
+                  />
                 </div>
                 <div class="col-md-12">
-                  <label for="tube-status" class="form-label">حالة الانبوبة</label>
-                  <input type="text" class="form-control" id="tube-status" name="tube-status" />
+                  <label for="tube-status" class="form-label"
+                    >حالة الانبوبة</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tube-status"
+                    name="tube-status"
+                  />
                 </div>
                 <div class="col-md-12">
-                  <label for="kilo-cost" class="form-label">سعر كيلو الغاز</label>
-                  <input type="number" class="form-control" id="kilo-cost" name="kilo-cost" />
+                  <label for="kilo-cost" class="form-label"
+                    >سعر كيلو الغاز</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="kilo-cost"
+                    name="kilo-cost"
+                  />
                 </div>
                 <div class="col-6">
-                  <label for="full-weight" class="form-label">وزن الانبوبة كامل (كغم)</label>
+                  <label for="full-weight" class="form-label"
+                    >وزن الانبوبة كامل (كغم)</label
+                  >
                   <input
                     type="number"
                     class="form-control"
@@ -58,7 +103,9 @@
                   />
                 </div>
                 <div class="col-6">
-                  <label for="gas-weight" class="form-label">كمية الغاز داخل الانبوبة (كغم)</label>
+                  <label for="gas-weight" class="form-label"
+                    >كمية الغاز داخل الانبوبة (كغم)</label
+                  >
                   <input
                     type="number"
                     class="form-control"
@@ -70,54 +117,109 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              إلغاء
+            </button>
             <button type="button" class="btn btn-primary">إضافة</button>
           </div>
         </div>
       </div>
     </div>
     <!-- DELETE MODAL -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="deleteModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-          <div class="modal-body">
-            هل تريد حذف الصف؟
-          </div>
+          <div class="modal-body">هل تريد حذف الصف؟</div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">لا</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              لا
+            </button>
             <button type="button" class="btn btn-primary">نعم</button>
           </div>
         </div>
       </div>
     </div>
     <!-- EDIT MODAL -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div
+      class="modal fade"
+      id="editModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+      >
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">تعديل الانبوبة</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <div class="container-fluid">
               <form class="row">
                 <div class="col-md-12">
                   <label for="edit-barcode" class="form-label">الباركود</label>
-                  <input type="file" class="form-control" id="edit-barcode" name="edit-barcode" />
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="edit-barcode"
+                    name="edit-barcode"
+                  />
                 </div>
                 <div class="col-md-12">
-                  <label for="edit-tube-status" class="form-label">حالة الانبوبة</label>
-                  <input type="text" class="form-control" id="edit-tube-status" name="edit-tube-status" />
+                  <label for="edit-tube-status" class="form-label"
+                    >حالة الانبوبة</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="edit-tube-status"
+                    name="edit-tube-status"
+                  />
                 </div>
                 <div class="col-md-12">
-                  <label for="edit-kilo-cost" class="form-label">سعر كيلو الغاز</label>
-                  <input type="number" class="form-control" id="edit-kilo-cost" name="edit-kilo-cost" />
+                  <label for="edit-kilo-cost" class="form-label"
+                    >سعر كيلو الغاز</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="edit-kilo-cost"
+                    name="edit-kilo-cost"
+                  />
                 </div>
                 <div class="col-6">
-                  <label for="edit-full-weight" class="form-label">وزن الانبوبة كامل (كغم)</label>
+                  <label for="edit-full-weight" class="form-label"
+                    >وزن الانبوبة كامل (كغم)</label
+                  >
                   <input
                     type="number"
                     class="form-control"
@@ -126,7 +228,9 @@
                   />
                 </div>
                 <div class="col-6">
-                  <label for="edit-gas-weight" class="form-label">كمية الغاز داخل الانبوبة (كغم)</label>
+                  <label for="edit-gas-weight" class="form-label"
+                    >كمية الغاز داخل الانبوبة (كغم)</label
+                  >
                   <input
                     type="number"
                     class="form-control"
@@ -138,7 +242,13 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              إلغاء
+            </button>
             <button type="button" class="btn btn-primary">تعديل</button>
           </div>
         </div>
@@ -160,19 +270,115 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
+            <td scope="row">1</td>
             <td>ممتلئة</td>
-            <td>12كغم</td>
-            <td>60</td>
-            <td>99</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
             <td>
-              <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
+              <button
+                type="button"
+                class="btn btn-success btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#editModal"
+              >
                 تعديل
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">حذف</button>
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#deleteModal"
+              >
+                حذف
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td scope="row">1</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-success btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#editModal"
+              >
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#deleteModal"
+              >
+                حذف
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td scope="row">1</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-success btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#editModal"
+              >
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#deleteModal"
+              >
+                حذف
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td scope="row">1</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>ممتلئة</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-success btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#editModal"
+              >
+                تعديل
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#deleteModal"
+              >
+                حذف
+              </button>
             </td>
           </tr>
         </tbody>
@@ -183,11 +389,11 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/tables-script.js"></script>
     <script>
-      $(document).ready(function(){
+      $(document).ready(function () {
         setTimeout(() => {
-          $('.table-container .btn-add').attr('data-bs-toggle', 'modal');
-          $('.table-container .btn-add').attr('data-bs-target', '#addModal');
-          $('.table-container .btn-add').text('+ إضافة انبوبة جديدة');
+          $(".table-container .btn-add").attr("data-bs-toggle", "modal");
+          $(".table-container .btn-add").attr("data-bs-target", "#addModal");
+          $(".table-container .btn-add").text("+ إضافة انبوبة جديدة");
         }, 100);
       });
     </script>
