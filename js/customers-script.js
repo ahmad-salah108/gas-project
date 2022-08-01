@@ -59,7 +59,7 @@ $(document).ready(function () {
     });
   }, 100);
   $(".loading-screen").hide();
-  $(document.body).css("overflow", "auto");
+  $(document.body).css("overflow", "visible");
 });
 
 function noWrap() {

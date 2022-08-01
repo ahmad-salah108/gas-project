@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>الصفحة الرئيسية</title>
     <!-- Google Fonts Cairo -->
-    <link rel="preload" href="https://fonts.googleapis.com" />
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
       rel="stylesheet"
@@ -30,71 +30,79 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-    <div class="grid text-center">
-      <div class="info-box row g-col-6 g-col-md-3">
+    <div class="cards-container">
+      <div class="my-card info-card row">
         <div class="col">
-          <span data-goal="">0</span>
+          <span class="info-count" data-goal="6423">0</span>
           <strong>المبلغ المالي</strong>
         </div>
         <div class="col">
-          <i class="fa-solid fa-money-bills"></i>
+          <i class="fa-solid fa-hand-holding-dollar"></i>
         </div>
       </div>
-      <div class="info-box row g-col-6 g-col-md-3">
+      <div class="my-card info-card row">
         <div class="col">
-          <span data-goal="">0</span>
-          <strong>المبلغ المالي</strong>
+          <span class="info-count" data-goal="3000">0</span>
+          <strong>الزبائن</strong>
         </div>
         <div class="col">
-          <i class="fa-solid fa-money-bills"></i>
-        </div>
-      </div>
-      <div class="info-box row g-col-6 g-col-md-3">
-        <div class="col">
-          <span data-goal="">0</span>
-          <strong>المبلغ المالي</strong>
-        </div>
-        <div class="col">
-          <i class="fa-solid fa-money-bills"></i>
+          <i class="fa-solid fa-users"></i>
         </div>
       </div>
-      <div class="info-box row g-col-6 g-col-md-3">
+      <div class="my-card info-card row">
         <div class="col">
-          <span data-goal="">0</span>
-          <strong>المبلغ المالي</strong>
+          <span class="info-count" data-goal="3000">0</span>
+          <strong>الانابيب المباعة</strong>
         </div>
         <div class="col">
-          <i class="fa-solid fa-money-bills"></i>
+          <i class="fa-solid fa-jar"></i>
+        </div>
+      </div>
+      <div class="my-card info-card row">
+        <div class="col">
+          <span class="info-count" data-goal="600">0</span>
+          <strong>سعر كيلو الغاز</strong>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+      </div>
+      <div class="my-card chart-container">
+        <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
+      </div>
+      <div class="my-card row progress">
+        <div class="col progress-info">
+          <div class="icon-container">
+            <i class="fa-solid fa-money-bills"></i>
+          </div>
+          <strong class="progress-title">نسبة البيع</strong>
+          <strong class="info-count progress-number" data-goal="1000">0</strong>
+        </div>
+        <div class="col">
+          <div class="circular-progress">
+            <div class="value-container" data-goal="65">0%</div>
+          </div>
+        </div>
+      </div>
+      <div class="my-card row progress">
+        <div class="col progress-info">
+          <div class="icon-container">
+            <i class="fa-solid fa-money-bills"></i>
+          </div>
+          <strong class="progress-title">نسبة البيع</strong>
+          <strong class="info-count progress-number" data-goal="1000">0</strong>
+        </div>
+        <div class="col">
+          <div class="circular-progress">
+            <div class="value-container" data-goal="80">0%</div>
+          </div>
         </div>
       </div>
     </div>
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/all.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".loading-screen").hide();
-        $(document.body).css("overflow", "auto");
-      });
-
-      window.onload = function () {
-        setTimeout(() => {
-          getPaddinglocalStorage();
-          window.ondeviceorientation = function () {
-            getPaddinglocalStorage();
-          };
-          window.onresize = function () {
-            getPaddinglocalStorage();
-          };
-        }, 100);
-      };
-      function getPaddinglocalStorage() {
-        if (localStorage.getItem("body-padding-top") == "true") {
-          document.body.classList.add("body-padding-top");
-        } else {
-          document.body.classList.remove("body-padding-top");
-        }
-      }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="../js/home-script.js"></script>
   </body>
 </html>

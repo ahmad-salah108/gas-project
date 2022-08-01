@@ -9,7 +9,7 @@ window.onload = function(){
   }
 }
 function setPaddinglocalStorage(){
-  if(document.body.offsetWidth <= 767.9){
+  if(window.innerWidth <= 767.9){
     localStorage.setItem('body-padding-top', 'true');
   }else{
     localStorage.setItem('body-padding-top', 'false')

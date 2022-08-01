@@ -6,6 +6,7 @@
   --border-bottom-color: #ddd;
   --main-gradient: rgb(28, 121, 213);
   --shadow: 0 0 10px 0.25rem rgb(13 110 253 / 10%);
+  --cards-shadow: 6px 6px 3px 0 rgb(0 0 0 / 7%);
   --section-margin: 20px;
   --light-blue: #e5f5fc;
 }

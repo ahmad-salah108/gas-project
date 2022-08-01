@@ -6,8 +6,8 @@
   --main-gradient: rgb(28, 121, 213);
   --color-text: #ebe8e8;
   --body-background-color: rgb(250, 250, 250);
-  --sidebar-background-color: hsl(205deg 11% 18%);
-  --navlink-background-color: hsl(205deg 11% 27%);
+  --sidebar-background-color: hsl(210deg 40% 11%); /*hsl(205deg 11% 18%)*/
+  --navlink-background-color: hsl(210deg 40% 18%); /*hsl(205deg 11% 27%)*/
 }
 * {
   margin: 0;
