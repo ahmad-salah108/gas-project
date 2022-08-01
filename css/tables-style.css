@@ -177,14 +177,17 @@ form.row>*{
 table.dataTable.no-footer {
   padding-top: 20px;
   font-size: 0.9rem;
-  border-bottom: none;
+  border-bottom: 1px solid #eee;
 }
 table.dataTable thead th,
 table.dataTable thead td{
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid #eee;
 }
 tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: none;
+  border-style: none;
+  border-color: transparent;
+  border-width: 0;
 }
 /* pagination */
 .dataTables_wrapper .dataTables_paginate .paginate_button {
