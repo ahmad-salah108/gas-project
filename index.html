@@ -78,7 +78,7 @@
     </div>
     <div class="container-fluid">
       <div class="row main-row">
-        <nav id="sidebarMenu" class="d-md-block sidebar collapse">
+        <nav id="sidebarMenu" class="d-md-flex sidebar collapse">
           <div class="position-sticky pt-3">
             <div class="logo-darkmode">
               <a class="navbar-brand me-0" href=""
@@ -97,18 +97,13 @@
             </div>
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a
-                  id="home-link"
-                  class="nav-link active"
-                  aria-current="page"
-                  href="#"
-                >
+                <a id="home-link" class="nav-link active" aria-current="page" title="الصفحة الرئيسية">
                   <i class="fa-solid fa-home"></i>
                   <span class="nav-link-name">الصفحة الرئيسية</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a id="tubes-link" class="nav-link" href="#">
+                <a id="tubes-link" class="nav-link" title="الأنابيب">
                   <i
                     class="fa-solid fa-jar fa-lg"
                     style="margin-right: 2px"
@@ -117,48 +112,51 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a id="store-link" class="nav-link" href="#">
+                <a id="store-link" class="nav-link" title="المخزن">
                   <i class="fa-solid fa-warehouse"></i>
                   <span class="nav-link-name">المخزن</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a id="customers-link" class="nav-link" href="#">
+                <a id="customers-link" class="nav-link" title="الزبائن">
                   <i class="fa-solid fa-users"></i>
                   <span class="nav-link-name">الزبائن</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a id="branches-link" class="nav-link" href="#">
+                <a id="branches-link" class="nav-link" title="الفروع">
                   <i class="fa-solid fa-code-branch"></i>
                   <span class="nav-link-name">الفروع</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a id="distribution-link" class="nav-link" href="#">
+                <a id="distribution-link" class="nav-link" title="التوزيع">
                   <i class="fa-solid fa-truck"></i>
                   <span class="nav-link-name">التوزيع</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a id="employees-link" class="nav-link" href="#">
+                <a id="employees-link" class="nav-link" title="الموظفين">
                   <i class="fa-solid fa-user-group"></i>
                   <span class="nav-link-name">الموظفين</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a
-                  id="logout"
-                  class="nav-link logout"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exitModal"
-                >
-                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                  <span class="nav-link-name">تسجيل الخروج</span>
-                </a>
-              </li>
             </ul>
+          </div>
+          <div class="profile">
+            <img src="imgs/tyrion.jpg" alt="profile picture">
+            <div class="username">
+              <strong>Tyrion Lannister</strong>
+              <span>موظف</span>
+            </div>
+            <a
+              id="logout"
+              class="nav-link logout"
+              data-bs-toggle="modal"
+              data-bs-target="#exitModal"
+            >
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
           </div>
         </nav>
         <main class="main-content">
