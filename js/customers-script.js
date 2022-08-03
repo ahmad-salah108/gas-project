@@ -22,6 +22,31 @@ function getPaddinglocalStorage(){
 $(document).ready(function () {
   // add no-wrap class
   noWrap();
+  // search customers
+  let normalCus = $(".normalCus tbody tr");
+  let normalCusBody = $('.normalCus tbody');
+  let driverCus = $(".driverCus tbody tr");
+  let driverCusBody = $('.driverCus tbody');
+  let storeCus = $(".storeCus tbody tr");
+  let storeCusBody = $('.storeCus tbody');
+
+  $('#search').on('input', function(){
+    searchCus(this.value, normalCus, normalCusBody);
+    searchCus(this.value, driverCus, driverCusBody);
+    searchCus(this.value, storeCus, storeCusBody);
+  });
+
+  function searchCus(value, cus, cusBody){
+    let newArr = cus.filter((i, e)=>{
+      return $(e).text().indexOf(value) > -1;
+    });
+    if(newArr.length == 0){
+      cusBody.text('');
+    }else{
+      cusBody.text('');
+      cusBody.append(...newArr);
+    }
+  }
   // load datatable
   $(".table-striped").DataTable();
   setTimeout(() => {
