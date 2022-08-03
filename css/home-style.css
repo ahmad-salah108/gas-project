@@ -1,6 +1,9 @@
 /* GENERAL */
 body {
   padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
 }
 .row > * {
   padding: 0;
@@ -12,6 +15,7 @@ body {
 }
 /* CARDS CONTAINER */
 .cards-container {
+  flex-grow: 1;
   display: grid;
   gap: 1.5rem;
   row-gap: 2rem;
