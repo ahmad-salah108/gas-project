@@ -25,7 +25,7 @@ function getPaddinglocalStorage() {
 }
 
 // CHART.JS
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var xValues = ["الانابيب", "الانابيب", "الانابيب", "الانابيب", "الانابيب"];
 var yValues = [55, 49, 44, 24, 15];
 var barColors = "#1c79d5";
 var canvas = document.querySelector("#myChart");

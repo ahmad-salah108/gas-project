@@ -230,7 +230,7 @@ ul.nav.flex-column{
 }
 @media (max-width: 767.9px) {
   .profile img{
-    width: 13%;
+    width: 50px;
     margin-left: 10px;
   }
 }

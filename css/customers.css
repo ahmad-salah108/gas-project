@@ -1,3 +1,6 @@
+html{
+  scroll-padding-top: 84px;
+}
 .h3-heading{
   position: relative;
   background-color: var(--light-blue);
